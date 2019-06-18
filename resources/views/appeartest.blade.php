@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>id</th>
+    <th>company_name</th>
+    <th>hitokoto</th>
+    <th>industry</th>
+    <th>jobtype</th>
+    <th>status</th>
+    <th>userid</th>
+    <th>created_at</th>
+    <th>updated_at</th>
+    <th>deleted_at</th>
+  </tr>
+  @foreach ($items as $item)
+  <tr>
+    <td>{{$item->id}}</td>
+    <td>{{$item->company_name}}</td>
+    <td>{{$item->hitokoto}}</td>
+    <td>{{$item->industry}}</td>
+    <td>{{$item->jobtype}}</td>
+    <td>{{$item->status}}</td>
+    <td>{{$item->userid}}</td>
+    <td>{{$item->created_at}}</td>
+    <td>{{$item->updated_at}}</td>
+    <td>{{$item->deleted_at}}</td>
+  </tr>
+  @endforeach
+</table>
