@@ -24,15 +24,26 @@ class RecnoteController extends Controller
     public function companyShow(Request $request)
     {
         $user = Auth::user();
-        $items = Company::all();
-        $company = $items[$request->id];
-        if (isset($user->id) && $company->userid == $user->id) {
-            $data = [
-            'a' => 'aaa',
-            'request' => $request,
-            'company' => $company,
-            ];
-            return view('companyDetail', $data);
+        if (isset($user->id) && isset($request->id))
+        {
+            $company = Company::where('id', $request->id)->first();
+            if (empty($company))
+            {
+                return redirect('/');
+            }
+            if ($company->userid == $user->id)
+            {   
+                $data = [
+                'a' => 'aaa',
+                'request' => $request,
+                'company' => $company,
+                ];
+                return view('companyDetail', $data);
+            }
+            else
+            {
+                return redirect('/');
+            }
         }else {
             return redirect('/');
         }

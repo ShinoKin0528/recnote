@@ -4,7 +4,7 @@
 <div class="company__box">
   @foreach ($items as $item)
   @if ($item->userid == $user->id)
-  <a href="/companyDetail?id={{$item->id - 1}}" style="display: block;">
+  <a href="/companyDetail?id={{$item->id}}" style="display: block;">
     <div class="company__top">
       @if(app('env')=='local')
       <img class="company__status" src="{{ asset('/image/' . $item->status . '.svg') }}">
