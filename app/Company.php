@@ -16,4 +16,9 @@ class Company extends Model
         'status' => 'required',
         'userid' => 'integer',
     );
+
+    public function getUserid()
+    {
+        return $this->id;
+    }
 }
