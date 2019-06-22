@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Company;
+use App\Basic;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -13,15 +14,20 @@ class RecnoteController extends Controller
     public function index(Request $request)
     {
         $user = Auth::user();
-        $items = Company::all();
+        $companes = Company::all();
+        $basics = Basic::all();
+        for($i = 0; $i < count($basics); $i++)
+        {
+            $companes[$i]['headoffice_palce'] = $basics[$i]->headoffice_palce;
+        }
         $param = [
-            'items' => $items,
+            'companes' => $companes,
             'user' => $user
         ];
         return view('index', $param);
     }
 
-    public function companyShow(Request $request)
+    public function companyDetail(Request $request)
     {
         $user = Auth::user();
         if (isset($user->id) && isset($request->id))
@@ -33,10 +39,10 @@ class RecnoteController extends Controller
             }
             if ($company->userid == $user->id)
             {   
+                $basic = Basic::where('company_id', $request->id)->first();
                 $data = [
-                'a' => 'aaa',
-                'request' => $request,
-                'company' => $company,
+                    'company' => $company,
+                    'basic' => $basic,
                 ];
                 return view('companyDetail', $data);
             }
@@ -47,5 +53,10 @@ class RecnoteController extends Controller
         }else {
             return redirect('/');
         }
+    }
+
+    public function companyAdd(Request $request)
+    {
+        return view('companyAdd');
     }
 }

@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Basic;
+
 class Company extends Model
 {
     protected $guarded = array('id');
@@ -17,8 +19,8 @@ class Company extends Model
         'userid' => 'integer',
     );
 
-    public function getUserid()
+    public function companyBasicInformation()
     {
-        return $this->id;
+        return $this->hasOne('App\Basic');
     }
 }

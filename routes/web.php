@@ -24,4 +24,5 @@ Route::get('/addtest', 'AppeartestController@add');
 Route::post('/addtest', 'AppeartestController@create');
 
 Route::get('/', 'RecnoteController@index');
-Route::get('/companyDetail', 'RecnoteController@companyShow');
+Route::get('/companyDetail', 'RecnoteController@companyDetail');
+Route::get('/companyAdd', 'RecnoteController@companyAdd');
