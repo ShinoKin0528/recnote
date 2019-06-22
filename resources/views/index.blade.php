@@ -1,6 +1,6 @@
 @if (Auth::check())
 <div class="company__box">
-  @foreach ($companes as $company)
+  @foreach ($companies as $company)
   @if ($company->userid == $user->id)
   <a href="/companyDetail?id={{$company->id}}" style="display: block;">
     <div class="company__top">
@@ -26,7 +26,7 @@
       </tr>
       <tr class="company__tr">
         <th class="company__th">本社</th>
-        <td class="company__td">{{$company->headoffice_palce}}</td>
+        <td class="company__td">{{$company->headoffice_place}}</td>
       </tr>
     </table>
   </a>

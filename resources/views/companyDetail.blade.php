@@ -29,7 +29,7 @@
     </ul>
     <ul class="company__list">
       <li class="comapny__ttl">本社</li>
-      <li class="company__item">{{$basic->headoffice_palce}}</li>
+      <li class="company__item">{{$basic->headoffice_place}}</li>
     </ul>
   </div>
 </div>
@@ -61,7 +61,7 @@
     </ul>
     <ul class="company__list">
       <li class="comapny__ttl">本社</li>
-      <li class="company__item">{{$basic->headoffice_palce . '本社'}}</li>
+      <li class="company__item">{{$basic->headoffice_place . '本社'}}</li>
       <li class="company__item">〒{{$basic->headoffice_postalcode_first . '-' . $basic->headoffice_postalcode_last}}</li>
       <li class="company__item">{{$basic->headoffice_address}}</li>
     </ul>

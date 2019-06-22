@@ -21,7 +21,7 @@ class CreateBasicsTable extends Migration
             $table->bigInteger('capital')->nullable();
             $table->string('representative')->nullable();
             $table->integer('employees_number')->nullable();
-            $table->string('headoffice_palce')->nullable();
+            $table->string('headoffice_place')->nullable();
             $table->unsignedInteger('headoffice_postalcode_first')->nullable();
             $table->unsignedInteger('headoffice_postalcode_last')->nullable();
             $table->string('headoffice_address')->nullable();
