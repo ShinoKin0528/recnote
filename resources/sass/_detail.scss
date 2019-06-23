@@ -1,0 +1,87 @@
+.page-top {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+
+    &__ttl {
+        font-size: 16px;
+        font-weight: bold;
+        color: #37b2f4;
+    }
+
+    &__company-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #37b2f4;
+        margin-top: 5px;
+    }
+}
+
+.info-box {
+    &__ttls {
+        background: #fff;
+        padding: 10px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__ttl {
+        font-size: 24px;
+        color: #37b2f4;
+        font-weight: bold;
+    }
+
+    &__contents {
+        background: #fff;
+        padding: 0 10px 10px;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+.detail {
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    &__status {
+        margin-right: 10px;
+    }
+
+    &__hitokoto {
+        font-size: 12px;
+        color: #4b4b4b;
+    }
+
+    &__name {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 5px;
+        color: #4b4b4b;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    &__ttl {
+        display: inline-block;
+        padding: 5px;
+        background: #ffec84;
+        color: #4b4b4b;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+
+    &__item {
+        padding-top: 5px;
+        color: #4b4b4b;
+        font-size: 16px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        color: #4b4b4b;
+    }
+}

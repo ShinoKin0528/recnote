@@ -54,14 +54,20 @@
   </div>
   <div class="bottom-btn">
     <div class="bottom-btn--now">
-      <a class="bottom-btn__link" href="/">企業情報</a>
+      <a class="bottom-btn__link bottom-btn__link--now" href="/">企業情報</a>
     </div>
     <div class="bottom-btn--notnow">
-      <a class="bottom-btn__link" href="/">自分情報</a>
+      <a class="bottom-btn__link bottom-btn__link--notnow" href="/">自分情報</a>
     </div>
   </div>
 </div>
 @else
-<p>ログインしてください</p>
-<a href="/login">ログイン</a>
+<div class="wrap">
+  <div class="top-button">
+    <a href="/register" class="top-button__link">使ってみる</a>
+  </div>
+  <div class="top-button">
+    <a href="/login" class="top-button__link">ログイン</a>
+  </div>
+</div>
 @endif

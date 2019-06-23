@@ -26,4 +26,4 @@ Route::post('/addtest', 'AppeartestController@create');
 Route::get('/', 'RecnoteController@index');
 Route::get('/companyDetail', 'RecnoteController@companyDetail');
 Route::get('/companyAdd', 'RecnoteController@companyAdd');
-Route::post('/companyAdd', 'RecnoteController@comapnyCreate');
+Route::post('/companyAdd', 'RecnoteController@companyCreate');

@@ -1,0 +1,81 @@
+.company {
+    &__box {
+        &--add {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.add-input {
+    width: 100%;
+    font-size: 16px;
+    padding: 0 0 5px 5px;
+    border: none;
+    border-bottom: 1px solid #4b4b4b;
+
+    &:focus {
+        outline: 0;
+        border-bottom: 1px solid #37b2f4;
+    }
+}
+
+select {
+    width: 100%;
+    padding: 0 0 5px 5px;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    appearance: none;
+    font-size: 16px;
+
+    option {
+    }
+}
+
+.select-box {
+    border-bottom: 1px solid #4b4b4b;
+    position: relative;
+
+    &::after {
+        content: '';
+        background-image: url('../image/select_triangle.svg');
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 8px;
+        background-size: contain;
+        vertical-align: middle;
+    }
+}
+
+.detail {
+    &__error {
+        font-size: 12px;
+        color: red;
+        padding-top: 5px;
+    }
+
+    &__item {
+        &--send {
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+
+.submit-button__add {
+    padding: 15px 60px;
+    font-size: 16px;
+    background: #37b2f4;
+    color: #fff;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

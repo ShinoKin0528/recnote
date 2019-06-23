@@ -68,7 +68,7 @@ class RecnoteController extends Controller
         }
     }
 
-    public function comapnyCreate(Request $request)
+    public function companyCreate(Request $request)
     {
         $this->validate($request, [
             'company_name' => 'required',
