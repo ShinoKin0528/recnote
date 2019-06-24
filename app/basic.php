@@ -10,7 +10,7 @@ class Basic extends Model
     protected $guarded = array('id', 'company_id');
 
     public static $rules = array(
-        'website_url' => 'nullable|url|max:50',
+        'website_url' => 'required|nullable|url|max:50',
         'founding_year' => 'nullable|integer|digits_between:3,4',
         'capital' => 'nullable|numeric|digits_between:0,15',
         'representative' => 'nullable|string|max:30',

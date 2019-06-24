@@ -54,7 +54,7 @@
     <div class="info-box__ttls">
       <h2 class="info-box__ttl">基本情報</h2>
     </div>
-    @if (isset($basic))
+    @if (isset($basic->website_url))
     <div class="info-box__contents">
       <ul class="detail__list">
         <li class="detail__ttl--box"><span class="detail__ttl">webサイト</span></li>
@@ -94,7 +94,11 @@
       </ul>
     </div>
     @else
-    <p>no</p>
+    <div class="info-box__contents">
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link"><a href="" class="no-data__link">基本情報を登録する</a></li>
+      </ul>
+    </div>
     @endif
   </div>
 </div>
