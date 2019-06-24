@@ -133,3 +133,30 @@ body {
         display: block;
     }
 }
+
+.no-data {
+    padding: 20px 0;
+
+    &__item {
+        text-align: center;
+
+        &--txt {
+            font-size: 16px;
+            color: #4b4b4b;
+        }
+
+        &--link {
+            display: block;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 20px 50px;
+        margin-top: 20px;
+        border-radius: 5px;
+        background: #37b2f4;
+        color: #fff;
+        font-weight: bold;
+    }
+}

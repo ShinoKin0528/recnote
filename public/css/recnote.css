@@ -120,6 +120,29 @@ body {
   display: block;
 }
 
+.no-data {
+  padding: 20px 0;
+}
+.no-data__item {
+  text-align: center;
+}
+.no-data__item--txt {
+  font-size: 16px;
+  color: #4b4b4b;
+}
+.no-data__item--link {
+  display: block;
+}
+.no-data__link {
+  display: inline-block;
+  padding: 20px 50px;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: #37b2f4;
+  color: #fff;
+  font-weight: bold;
+}
+
 .page-top {
   background: #fff;
   padding: 10px;
@@ -230,6 +253,7 @@ select {
           appearance: none;
   font-size: 16px;
 }
+
 .select-box {
   border-bottom: 1px solid #4b4b4b;
   position: relative;

@@ -14,11 +14,24 @@ class RecnoteController extends Controller
     public function index(Request $request)
     {
         $user = Auth::user();
-        $companies = Company::all();
-        $basics = Basic::all();
-        for($i = 0; $i < count($basics); $i++)
+        if(isset($user))
         {
-            $companies[$i]['headoffice_place'] = $basics[$i]->headoffice_place;
+            $companies = Company::where('userid', $user->id)->get();
+            if($companies->isEmpty())
+            {
+                $companies = NULL;
+            }
+            else {
+                $company_id = $companies[0]['id'];
+                $basics = Basic::where('company_id', $company_id)->get();
+                for($i = 0; $i < count($basics); $i++)
+                {
+                    $companies[$i]['headoffice_place'] = $basics[$i]->headoffice_place;
+                }
+            }
+        }
+        else {
+            $companies = NULL;
         }
         $param = [
             'companies' => $companies,

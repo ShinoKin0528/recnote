@@ -7,12 +7,11 @@
   <script type="text/javascript" src="//typesquare.com/3/tsad/script/ja/typesquare.js?5d0047c660c84ec8b41e6ca1e90393a3"
     charset="utf-8"></script>
 </head>
-
 @if (Auth::check())
 <div class="wrap">
   <div class="company__box">
+    @if (isset($companies))
     @foreach ($companies as $company)
-    @if ($company->userid == $user->id)
     <a class="company__detail-link" href="/companyDetail?id={{$company->id}}">
       <div class=" company__top">
         @if(app('env')=='local')
@@ -39,9 +38,14 @@
         <li class="company__txt">{{$company->headoffice_place}}</li>
       </ul>
     </a>
-    @endif
     @endforeach
   </div>
+  @else
+  <ul class="no-data">
+    <li class="no-data__item no-data__item--txt">興味をもった企業を登録しよう！</li>
+    <li class="no-data__item no-data__item--link"><a class="no-data__link" href="/companyAdd">企業を登録する</a></li>
+  </ul>
+  @endif
   <div class="add-company">
     <a class="add-company__button" href="/companyAdd">
       @if(app('env')=='local')
