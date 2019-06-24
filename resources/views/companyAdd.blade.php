@@ -10,7 +10,7 @@
 
 <div class="wrap">
   <div class="page-top">
-    <h1 class="page-top__ttl">企業情報登録</h1>
+    <h1 class="page-top__ttl">新規企業情報登録</h1>
   </div>
 </div>
 <div class="wrap">
