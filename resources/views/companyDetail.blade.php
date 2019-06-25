@@ -45,6 +45,11 @@
         <li class="detail__ttl--box"><span class="detail__ttl">本社</span></li>
         <li class="detail__item">{{$basic->headoffice_place}}</li>
       </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a href="/companyEdit?id={{$company->id}}"
+            class="no-data__link">基本情報を編集する</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

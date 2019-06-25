@@ -133,6 +133,9 @@ body {
 .no-data__item--link {
   display: block;
 }
+.no-data__item--left {
+  text-align: left;
+}
 .no-data__link {
   display: inline-block;
   padding: 20px 50px;

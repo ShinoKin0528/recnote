@@ -27,3 +27,6 @@ Route::get('/', 'RecnoteController@index');
 Route::get('/companyDetail', 'RecnoteController@companyDetail');
 Route::get('/companyAdd', 'RecnoteController@companyAdd');
 Route::post('/companyAdd', 'RecnoteController@companyCreate');
+
+Route::get('/companyEdit', 'CompanyController@edit');
+Route::post('/companyEdit', 'CompanyController@update');
