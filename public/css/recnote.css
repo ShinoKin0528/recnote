@@ -40,7 +40,7 @@ body {
 }
 .company__name {
   font-size: 16px;
-  font-family: UD Shin Go Bold;
+  font-family: UD Shin Maru Go Bold;
   font-weight: bold;
   margin-top: 5px;
   color: #4b4b4b;
@@ -100,7 +100,7 @@ body {
   display: block;
   padding: 21px 0;
   font-size: 16px;
-  font-family: UD Shin Go DemiBold;
+  font-family: UD Shin Maru Go DemiBold;
   font-weight: bold;
 }
 .bottom-btn__link--now {
@@ -118,7 +118,7 @@ body {
 }
 .top-button__link {
   font-size: 20px;
-  font-family: UD Shin Go DemiBold;
+  font-family: UD Shin Maru Go DemiBold;
   font-weight: bold;
   color: #4b4b4b;
   padding: 20px 0;
@@ -148,7 +148,7 @@ body {
   border-radius: 5px;
   background: #37b2f4;
   color: #fff;
-  font-family: UD Shin Go Bold;
+  font-family: UD Shin Maru Go DemiBold;
   font-weight: bold;
 }
 
@@ -159,13 +159,13 @@ body {
 }
 .page-top__ttl {
   font-size: 16px;
-  font-family: UD Shin Go DemiBold;
+  font-family: UD Shin Maru Go DemiBold;
   font-weight: bold;
   color: #37b2f4;
 }
 .page-top__company-name {
   font-size: 24px;
-  font-family: UD Shin Go DemiBold;
+  font-family: UD Shin Maru Go DemiBold;
   font-weight: bold;
   color: #37b2f4;
   margin-top: 5px;
@@ -179,7 +179,7 @@ body {
 .info-box__ttl {
   font-size: 24px;
   color: #37b2f4;
-  font-family: UD Shin Go DemiBold;
+  font-family: UD Shin Maru Go DemiBold;
   font-weight: bold;
 }
 .info-box__contents {
@@ -205,7 +205,7 @@ body {
 }
 .detail__name {
   font-size: 16px;
-  font-family: UD Shin Go Bold;
+  font-family: UD Shin Maru Go Bold;
   font-weight: bold;
   margin-top: 5px;
   color: #4b4b4b;
@@ -308,5 +308,5 @@ select {
 }
 
 body {
-  font-family: UD Shin Go Regular;
+  font-family: UD Shin Maru Go Regular;
 }
