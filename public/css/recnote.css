@@ -294,3 +294,7 @@ select {
   border-radius: 5px;
   cursor: pointer;
 }
+
+body {
+  font-family: UD Shin Go Light;
+}
