@@ -304,5 +304,9 @@ select {
 }
 
 body {
-  font-family: UD Shin Go Regular, UD Shin Go Bold, UD Shin Go DemiBold;
+  font-family: UD Shin Go Regular;
+}
+
+img {
+  font-family: UD Shin Go DemiBold;
 }
