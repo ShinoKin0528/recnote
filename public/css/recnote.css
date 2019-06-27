@@ -30,6 +30,8 @@ body {
   padding: 20px 0 10px;
 }
 .company__status {
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
 }
 .company__hitokoto {
@@ -193,6 +195,8 @@ body {
           align-items: center;
 }
 .detail__status {
+  width: 50px;
+  height: 50px;
   margin-right: 10px;
 }
 .detail__hitokoto {
