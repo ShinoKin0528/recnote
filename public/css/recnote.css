@@ -305,8 +305,15 @@ select {
   border-style: none;
   border-radius: 5px;
   cursor: pointer;
+  font-family: UD Shin Maru Go DemiBold;
 }
 
 body {
+  font-family: UD Shin Maru Go Regular;
+}
+
+input,
+option,
+select {
   font-family: UD Shin Maru Go Regular;
 }
