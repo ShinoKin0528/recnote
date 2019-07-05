@@ -45,6 +45,6 @@ class CompanyController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $company->fill($form)->save();
-        return redirect('/');
+        return redirect('/companyDetail?id=' . $company['id']);
     }
 }
