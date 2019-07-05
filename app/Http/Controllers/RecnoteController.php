@@ -42,7 +42,6 @@ class RecnoteController extends Controller
         $param = [
             'companies' => $companies,
             'user' => $user,
-            'basics' => $basics,
         ];
         return view('index', $param);
     }
