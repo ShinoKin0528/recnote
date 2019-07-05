@@ -22,11 +22,17 @@ class RecnoteController extends Controller
                 $companies = NULL;
             }
             else {
-                $company_id = $companies[0]['id'];
+                /*$company_id = $companies[0]['id'];
                 $basics = Basic::where('company_id', $company_id)->get();
                 for($i = 0; $i < count($basics); $i++)
                 {
                     $companies[$i]['headoffice_place'] = $basics[$i]->headoffice_place;
+                }*/
+                $company_num = count($companies);
+                for($i = 0; $i < count($companies); $i++) {
+                    $company_id = $companies[$i]['id'];
+                    $basics = Basic::where('company_id', $company_id)->first();
+                    $companies[$i]['headoffice_place'] = $basics['headoffice_place'];
                 }
             }
         }
@@ -35,7 +41,8 @@ class RecnoteController extends Controller
         }
         $param = [
             'companies' => $companies,
-            'user' => $user
+            'user' => $user,
+            'basics' => $basics,
         ];
         return view('index', $param);
     }
