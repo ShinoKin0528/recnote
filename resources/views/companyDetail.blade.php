@@ -95,13 +95,14 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl--box"><span class="detail__ttl">感じたこと</span></li>
-        <li class="detail__item">{{$basic->memo}}</li>
+        <li class="detail__item">{!! nl2br(e($basic->memo)) !!}</li>
       </ul>
     </div>
     @else
     <div class="info-box__contents">
       <ul class="detail-nodata">
-        <li class="no-data__item no-data__item--link"><a href="" class="no-data__link">基本情報を登録する</a></li>
+        <li class="no-data__item no-data__item--link"><a href="/basicAdd?id={{$company->id}}"
+            class="no-data__link">基本情報を登録する</a></li>
       </ul>
     </div>
     @endif

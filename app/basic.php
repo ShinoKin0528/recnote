@@ -14,7 +14,7 @@ class Basic extends Model
         'founding_year' => 'nullable|integer|digits_between:3,4',
         'capital' => 'nullable|numeric|digits_between:0,15',
         'representative' => 'nullable|string|max:30',
-        'employees_number' => 'nullable|integer|digits_betweeen:0,20',
+        'employees_number' => 'nullable|integer|digits_between:0,20',
         'headoffice_place' => 'nullable|string|max:50',
         'headoffice_postalcode_first' => 'nullable|integer|digits:3',
         'headoffice_postalcode_last' => 'nullable|integer|digits:4',

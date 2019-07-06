@@ -30,3 +30,7 @@ Route::post('/companyAdd', 'RecnoteController@companyCreate');
 
 Route::get('/companyEdit', 'CompanyController@edit');
 Route::post('/companyEdit', 'CompanyController@update');
+
+//基本情報
+Route::get('/basicAdd', 'BasicController@basicAdd');
+Route::post('/basicAdd', 'BasicController@basicCreate');
