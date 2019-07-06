@@ -298,8 +298,9 @@ select {
 }
 
 .submit-button__add {
-  padding: 15px 60px;
+  padding: 15px 30px;
   font-size: 16px;
+  border-radius: 5px;
   background: #37b2f4;
   color: #fff;
   border-style: none;
@@ -320,19 +321,19 @@ select {
 
 input[type=submit],
 input[type=button] {
-  border-radius: 0;
   -webkit-box-sizing: content-box;
   -webkit-appearance: button;
   -moz-appearance: button;
        appearance: button;
   border: none;
   box-sizing: border-box;
+  line-height: 1;
 }
 input[type=submit]::-webkit-search-decoration,
 input[type=button]::-webkit-search-decoration {
   display: none;
 }
-input[type=submit]::focus,
-input[type=button]::focus {
+input[type=submit]:focus,
+input[type=button]:focus {
   outline-offset: -2px;
 }

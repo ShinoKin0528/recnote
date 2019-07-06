@@ -14,16 +14,16 @@ select {
 
 input[type='submit'],
 input[type='button'] {
-    border-radius: 0;
     -webkit-box-sizing: content-box;
     -webkit-appearance: button;
     appearance: button;
     border: none;
     box-sizing: border-box;
+    line-height: 1;
     &::-webkit-search-decoration {
         display: none;
     }
-    &::focus {
+    &:focus {
         outline-offset: -2px;
     }
 }

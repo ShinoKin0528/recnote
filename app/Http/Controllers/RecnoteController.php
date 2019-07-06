@@ -22,12 +22,6 @@ class RecnoteController extends Controller
                 $companies = NULL;
             }
             else {
-                /*$company_id = $companies[0]['id'];
-                $basics = Basic::where('company_id', $company_id)->get();
-                for($i = 0; $i < count($basics); $i++)
-                {
-                    $companies[$i]['headoffice_place'] = $basics[$i]->headoffice_place;
-                }*/
                 $company_num = count($companies);
                 for($i = 0; $i < count($companies); $i++) {
                     $company_id = $companies[$i]['id'];
@@ -118,6 +112,6 @@ class RecnoteController extends Controller
         $form_basic->company_id = $company_id;
         $form_basic->save();
 
-        return redirect('/');
+        return redirect('/companyDetail?id=' . $company_id);
     }
 }
