@@ -114,7 +114,7 @@
       <ul class="detail__list">
         <li class="detail__item--send">
           <a href="/companyDetail?id={{$company_id}}" class="submit-button__add">戻る</a>
-          <input class="submit-button__add" type="submit" value="登録">
+          <input class="submit-button__add" type="submit" value="登録する">
         </li>
       </ul>
     </form>

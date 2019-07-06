@@ -79,7 +79,7 @@
         @endif
       </ul>
       <ul class="detail__list">
-        <li class="detail__item--send"><input class="submit-button__add" type="submit" value="登録"></li>
+        <li class="detail__item--send"><input class="submit-button__add" type="submit" value="登録する"></li>
       </ul>
     </form>
   </div>
