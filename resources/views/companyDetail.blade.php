@@ -63,7 +63,8 @@
     <div class="info-box__contents">
       <ul class="detail__list">
         <li class="detail__ttl--box"><span class="detail__ttl">webサイト</span></li>
-        <li class="detail__item"><a class="detail__link" href="{{$basic->website_url}}">{{$basic->website_url}}</a>
+        <li class="detail__item"><a class="detail__link" href="{{$basic->website_url}}"
+            target="_blank">{{$basic->website_url}}</a>
         </li>
       </ul>
       <ul class="detail__list">
