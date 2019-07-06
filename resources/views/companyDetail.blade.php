@@ -98,6 +98,11 @@
         <li class="detail__ttl--box"><span class="detail__ttl">感じたこと</span></li>
         <li class="detail__item">{!! nl2br(e($basic->memo)) !!}</li>
       </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a href="/basicEdit?id={{$company->id}}"
+            class="no-data__link">基本情報を編集する</a>
+        </li>
+      </ul>
     </div>
     @else
     <div class="info-box__contents">

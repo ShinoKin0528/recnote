@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CompanyController extends Controller
 {
-    public function edit(Request $request)
+    public function companyEdit(Request $request)
     {
         $user = Auth::user();
         if(isset($user->id) && isset($request->id))
@@ -38,7 +38,7 @@ class CompanyController extends Controller
         }
     }
 
-    public function update(Request $request)
+    public function companyUpdate(Request $request)
     {
         $this->validate($request, Company::$rules);
         $company = Company::find($request->id);

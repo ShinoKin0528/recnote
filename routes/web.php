@@ -28,9 +28,11 @@ Route::get('/companyDetail', 'RecnoteController@companyDetail');
 Route::get('/companyAdd', 'RecnoteController@companyAdd');
 Route::post('/companyAdd', 'RecnoteController@companyCreate');
 
-Route::get('/companyEdit', 'CompanyController@edit');
-Route::post('/companyEdit', 'CompanyController@update');
+Route::get('/companyEdit', 'CompanyController@companyEdit');
+Route::post('/companyEdit', 'CompanyController@companyUpdate');
 
 //基本情報
 Route::get('/basicAdd', 'BasicController@basicAdd');
 Route::post('/basicAdd', 'BasicController@basicCreate');
+Route::get('/basicEdit', 'BasicController@basicEdit');
+Route::post('/basicEdit', 'BasicController@basicUpdate');

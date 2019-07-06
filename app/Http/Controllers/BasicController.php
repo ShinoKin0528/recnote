@@ -55,4 +55,45 @@ class BasicController extends Controller
         $basic->fill($form)->save();
         return redirect('/companyDetail?id=' . $request->company_id);
     }
+
+    public function basicEdit(Request $request)
+    {
+        $user = Auth::user();
+        if(isset($user->id) && isset($request->id))
+        {
+            $company = Company::find($request->id);
+            if (empty($company))
+            {
+                return redirect('/');
+            }
+            if($company->userid == $user->id)
+            {
+                $basic = Basic::where('company_id', $company->id)->first();
+                $company_name = $company->company_name;
+                $data = [
+                    'basic' => $basic,
+                    'company_name' => $company_name
+                ];
+                return view('/basicEdit', $data);
+            }
+            else
+            {
+                return redirect('/');
+            }
+        }
+        else
+        {
+            return redirect('/');
+        }
+    }
+
+    public function basicUpdate(Request $request)
+    {
+        $this->validate($request, Basic::$rules);
+        $basic = Basic::find($request->company_id);
+        $form = $request->all();
+        unset($form['_token']);
+        $basic->fill($form)->save();
+        return redirect('/companyDetail?id=' . $request->company_id);
+    }
 }
