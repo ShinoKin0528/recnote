@@ -49,7 +49,7 @@ class BasicController extends Controller
     public function basicCreate(Request $request)
     {
         $this->validate($request, Basic::$rules);
-        $basic = Basic::find($request->company_id);
+        $basic = Basic::where('company_id', $request->company_id)->first();
         $form = $request->all();
         unset($form['_token']);
         $basic->fill($form)->save();
@@ -90,7 +90,7 @@ class BasicController extends Controller
     public function basicUpdate(Request $request)
     {
         $this->validate($request, Basic::$rules);
-        $basic = Basic::find($request->company_id);
+        $basic = Basic::where('company_id', $request->company_id)->first();
         $form = $request->all();
         unset($form['_token']);
         $basic->fill($form)->save();
