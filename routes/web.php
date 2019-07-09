@@ -36,3 +36,10 @@ Route::get('/basicAdd', 'BasicController@basicAdd');
 Route::post('/basicAdd', 'BasicController@basicCreate');
 Route::get('/basicEdit', 'BasicController@basicEdit');
 Route::post('/basicEdit', 'BasicController@basicUpdate');
+
+//自分情報
+Route::get('/myInfo', 'MyInfoController@index');
+Route::get('/myInfoAdd', 'MyInfoController@myInfoAdd');
+Route::post('/myInfoAdd', 'MyInfoController@myInfoCreate');
+Route::get('/myInfoEdit', 'MyInfoController@myInfoEdit');
+Route::post('/myInfoEdit', 'MyInfoController@myInfoUpdate');

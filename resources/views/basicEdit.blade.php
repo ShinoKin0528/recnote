@@ -203,6 +203,6 @@
     <a class="bottom-btn__link bottom-btn__link--now" href="/">企業情報</a>
   </div>
   <div class="bottom-btn--notnow">
-    <a class="bottom-btn__link bottom-btn__link--notnow" href="/">自分情報</a>
+    <a class="bottom-btn__link bottom-btn__link--notnow" href="/myInfo">自分情報</a>
   </div>
 </div>
