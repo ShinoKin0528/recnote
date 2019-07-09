@@ -56,9 +56,10 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">郵便番号</span></li>
-        <li class="detail__item">〒 <input class="add-input" type="text" name="headoffice_postalcode_first"
-            value="{{$basic->headoffice_postalcode_first}}"> - <input class="add-input" type="text"
-            name="headoffice_postalcode_last" value="{{$basic->headoffice_postalcode_last}}"></li>
+        <li class="detail__item">〒 <input class="add-input add-input--postalcode" type="text"
+            name="headoffice_postalcode_first" value="{{$basic->headoffice_postalcode_first}}"> - <input
+            class="add-input add-input--postalcode" type="text" name="headoffice_postalcode_last"
+            value="{{$basic->headoffice_postalcode_last}}"></li>
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">本社住所</span></li>
@@ -81,7 +82,8 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">感じたこと</span></li>
-        <li class="detail__item"><textarea name="memo" id="" cols="30" rows="10">{{$basic->memo}}</textarea></li>
+        <li class="detail__item"><textarea class="add-textarea" name="memo" id="" cols="30"
+            rows="10">{{$basic->memo}}</textarea></li>
       </ul>
       <ul class="detail__list">
         <li class="detail__item--send">
@@ -146,9 +148,10 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">郵便番号</span></li>
-        <li class="detail__item">〒 <input class="add-input" type="text" name="headoffice_postalcode_first"
-            value="{{old('headoffice_postalcode_first')}}"> - <input class="add-input" type="text"
-            name="headoffice_postalcode_last" value="{{old('headoffice_postalcode_last')}}"></li>
+        <li class="detail__item">〒 <input class="add-input add-input--postalcode" type="text"
+            name="headoffice_postalcode_first" value="{{old('headoffice_postalcode_first')}}"> - <input
+            class="add-input add-input--postalcode" type="text" name="headoffice_postalcode_last"
+            value="{{old('headoffice_postalcode_last')}}"></li>
         @if($errors->has('headoffice_postalcode_first'))
         <li class="detail__error">{{$errors->first('headoffice_postalcode_first')}}</li>
         @endif
@@ -182,7 +185,8 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">感じたこと</span></li>
-        <li class="detail__item"><textarea name="memo" id="" cols="30" rows="10">{{old('memo')}}</textarea></li>
+        <li class="detail__item"><textarea class="add-textarea" name="memo" id="" cols="30"
+            rows="10">{{old('memo')}}</textarea></li>
         @if($errors->has('memo'))
         <li class="detail__error">{{$errors->first('memo')}}</li>
         @endif

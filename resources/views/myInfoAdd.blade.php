@@ -35,7 +35,7 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">将来の自分について</span></li>
-        <li class="detail__item"><textarea name="what_future" id="" cols="30"
+        <li class="detail__item"><textarea class="add-textarea" name="what_future" id="" cols="30"
             rows="10">{{old('what_future')}}</textarea></li>
         @if($errors->has('what_future'))
         <li class="detail__error">{{$errors->first('what_future')}}</li>
@@ -50,7 +50,7 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">自分の強みに対する具体的エピソード</span></li>
-        <li class="detail__item"><textarea name="strength_detail" id="" cols="30"
+        <li class="detail__item"><textarea class="add-textarea" name="strength_detail" id="" cols="30"
             rows="10">{{old('strength_detail')}}</textarea></li>
         @if($errors->has('strength_detail'))
         <li class="detail__error">{{$errors->first('strength_detail')}}</li>
@@ -58,7 +58,7 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">自分の強みがどう仕事に活かせそうか</span></li>
-        <li class="detail__item"><textarea name="strength_job" id="" cols="30"
+        <li class="detail__item"><textarea class="add-textarea" name="strength_job" id="" cols="30"
             rows="10">{{old('strength_job')}}</textarea></li>
         @if($errors->has('strength_job'))
         <li class="detail__error">{{$errors->first('strength_job')}}</li>
@@ -73,7 +73,7 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">勉強内容</span></li>
-        <li class="detail__item"><textarea name="study_detail" id="" cols="30"
+        <li class="detail__item"><textarea class="add-textarea" name="study_detail" id="" cols="30"
             rows="10">{{old('study_detail')}}</textarea></li>
         @if($errors->has('study_detail'))
         <li class="detail__error">{{$errors->first('study_detail')}}</li>
@@ -88,7 +88,7 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">研究内容</span></li>
-        <li class="detail__item"><textarea name="research_detail" id="" cols="30"
+        <li class="detail__item"><textarea class="add-textarea" name="research_detail" id="" cols="30"
             rows="10">{{old('research_detail')}}</textarea></li>
         @if($errors->has('research_detail'))
         <li class="detail__error">{{$errors->first('research_detail')}}</li>

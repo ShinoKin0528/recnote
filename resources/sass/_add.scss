@@ -13,9 +13,23 @@
     border: none;
     border-bottom: 1px solid #4b4b4b;
 
+    &--postalcode {
+        width: 60px;
+    }
+
     &:focus {
         outline: 0;
         border-bottom: 1px solid #37b2f4;
+    }
+}
+
+.add-textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 0 0 5px 5px;
+    &:focus {
+        outline: 0;
+        border: 1px solid #37b2f4;
     }
 }
 
