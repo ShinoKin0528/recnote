@@ -43,3 +43,10 @@ Route::get('/myInfoAdd', 'MyInfoController@myInfoAdd');
 Route::post('/myInfoAdd', 'MyInfoController@myInfoCreate');
 Route::get('/myInfoEdit', 'MyInfoController@myInfoEdit');
 Route::post('/myInfoEdit', 'MyInfoController@myInfoUpdate');
+
+//詳細情報
+
+Route::get('/detailAdd', 'DetailController@detailAdd');
+Route::post('/detailAdd', 'DetailController@detailCreate');
+Route::get('/detailEdit', 'DetailController@detailEdit');
+Route::post('/detailEdit', 'DetailController@detailUpdate');

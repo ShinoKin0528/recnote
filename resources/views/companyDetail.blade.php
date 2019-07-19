@@ -115,6 +115,70 @@
   </div>
 </div>
 
+<div class="wrap">
+  <div class="info-box">
+    <div class="info-box__ttls">
+      <h2 class="info-box__ttl">詳細情報</h2>
+    </div>
+    @if (isset($detail))
+    <div class="info-box__contents">
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">企業理念</span></li>
+        <li class="detail__item">{{$detail->corporate_philosophy}}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">主な商品・サービス</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->service_product)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">顧客</span></li>
+        <li class="detail__item">{{$detail->to_client}}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">独自性</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->uniqueness)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">今後の展開</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->future)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">企業が大切にしていること</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->important_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">価値を感じたところ・魅力的なところ</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->feel_value)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">この企業で自分が与えられる価値</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->give_my_value)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">この会社がまさに悩んでいる課題</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->company_task)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">感じたこと</span></li>
+        <li class="detail__item">{!! nl2br(e($detail->memo)) !!}</li>
+      </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a href="/detailEdit?id={{$company->id}}"
+            class="no-data__link">詳細情報を編集する</a>
+        </li>
+      </ul>
+    </div>
+    @else
+    <div class="info-box__contents">
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link"><a href="/detailAdd?id={{$company->id}}"
+            class="no-data__link">詳細情報を登録する</a></li>
+      </ul>
+    </div>
+    @endif
+  </div>
+</div>
+
 <div class="bottom-btn">
   <div class="bottom-btn--now">
     <a class="bottom-btn__link bottom-btn__link--now" href="/">企業情報</a>

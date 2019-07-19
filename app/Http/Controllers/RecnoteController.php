@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Company;
 use App\Basic;
+use App\Detail;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -53,9 +54,11 @@ class RecnoteController extends Controller
             if ($company->userid == $user->id)
             {   
                 $basic = Basic::where('company_id', $request->id)->first();
+                $detail = Detail::where('company_id', $request->id)->first();
                 $data = [
                     'company' => $company,
                     'basic' => $basic,
+                    'detail' => $detail,
                 ];
                 return view('companyDetail', $data);
             }
