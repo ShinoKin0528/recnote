@@ -45,8 +45,13 @@ Route::get('/myInfoEdit', 'MyInfoController@myInfoEdit');
 Route::post('/myInfoEdit', 'MyInfoController@myInfoUpdate');
 
 //詳細情報
-
 Route::get('/detailAdd', 'DetailController@detailAdd');
 Route::post('/detailAdd', 'DetailController@detailCreate');
 Route::get('/detailEdit', 'DetailController@detailEdit');
 Route::post('/detailEdit', 'DetailController@detailUpdate');
+
+//希望職種
+Route::get('/wishJobtypeAdd', 'WishJobtypeController@wishJobtypeAdd');
+Route::post('/wishJobtypeAdd', 'WishJobtypeController@wishJobtypeCreate');
+Route::get('/wishJobtypeEdit', 'WishJobtypeController@wishJobtypeEdit');
+Route::post('/wishJobtypeEdit', 'WishJobtypeController@wishJobtypeUpdate');

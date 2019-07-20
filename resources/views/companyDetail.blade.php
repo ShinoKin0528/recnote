@@ -179,6 +179,50 @@
   </div>
 </div>
 
+<div class="wrap">
+  <div class="info-box">
+    <div class="info-box__ttls">
+      <h2 class="info-box__ttl">職種詳細</h2>
+    </div>
+    @if (isset($wish_jobtype))
+    <div class="info-box__contents">
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">希望職種</span></li>
+        <li class="detail__item">{{$wish_jobtype->wish_jobtype}}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">希望職種の仕事内容</span></li>
+        <li class="detail__item">{!! nl2br(e($wish_jobtype->jobtype_detail)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">希望職種で自分がやりたいこと</span></li>
+        <li class="detail__item">{!! nl2br(e($wish_jobtype->want_jobtype)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">希望職種で自分ができること</span></li>
+        <li class="detail__item">{!! nl2br(e($wish_jobtype->can_jobtype)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">感じたこと</span></li>
+        <li class="detail__item">{!! nl2br(e($wish_jobtype->memo)) !!}</li>
+      </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a href="/wishJobtypeEdit?id={{$company->id}}"
+            class="no-data__link">職種詳細を編集する</a>
+        </li>
+      </ul>
+    </div>
+    @else
+    <div class="info-box__contents">
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link"><a href="/wishJobtypeAdd?id={{$company->id}}"
+            class="no-data__link">職種詳細を登録する</a></li>
+      </ul>
+    </div>
+    @endif
+  </div>
+</div>
+
 <div class="bottom-btn">
   <div class="bottom-btn--now">
     <a class="bottom-btn__link bottom-btn__link--now" href="/">企業情報</a>
