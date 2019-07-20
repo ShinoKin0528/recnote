@@ -10,7 +10,7 @@
 
 <div class="wrap">
   <div class="page-top">
-    <h1 class="page-top__ttl">基本情報編集</h1>
+    <h1 class="page-top__ttl">詳細情報編集</h1>
     <p class="page-top__company-name">{{$company_name}}</p>
   </div>
 </div>
