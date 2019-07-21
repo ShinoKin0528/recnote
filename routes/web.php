@@ -58,7 +58,7 @@ Route::post('/wishJobtypeEdit', 'WishJobtypeController@wishJobtypeUpdate');
 
 //福利厚生
 Route::get('/welfareAdd', 'WelfareController@welfareAdd');
-Route::post('/welfareAdd', 'WelfareController@wwelfarereate');
+Route::post('/welfareAdd', 'WelfareController@welfareCreate');
 Route::get('/welfareEdit', 'WelfareController@welfareEdit');
 Route::post('/welfareEdit', 'WelfareController@welfareUpdate');
 
