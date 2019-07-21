@@ -75,7 +75,7 @@ Route::get('/companyInfomationSessionEdit', 'CompanyInfomationSessionController@
 Route::post('/companyInfomationSessionEdit', 'CompanyInfomationSessionController@companyInfomationSessionUpdate');
 
 //質問
-Route::get('questions/Add', 'QuestionsController@questionsAdd');
-Route::post('questions/Add', 'QuestionsController@questionsCreate');
-Route::get('questions/Edit', 'QuestionsController@questionsEdit');
-Route::post('questions/Edit', 'QuestionsController@questionsUpdate');
+Route::get('/questionsAdd', 'QuestionsController@questionsAdd');
+Route::post('/questionsAdd', 'QuestionsController@questionsCreate');
+Route::get('/questionsEdit', 'QuestionsController@questionsEdit');
+Route::post('/questionsEdit', 'QuestionsController@questionsUpdate');

@@ -66,9 +66,6 @@
             value="{{$wishJobtype->company_id}}"></li>
       </ul>
       <ul class="detail__list">
-        <li class="detail__item"><input class="add-input" type="hidden" name="company_id" value="{{$company_id}}"></li>
-      </ul>
-      <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">希望職種</span></li>
         <li class="detail__item"><input class="add-input" type="text" name="wish_jobtype"
             value="{{old('wish_jobtype')}}">

@@ -71,6 +71,10 @@
     <form action="companyInfomationSessionEdit" method="POST">
       @csrf
       <ul class="detail__list">
+        <li class="detail__item"><input class="add-input" type="hidden" name="company_id"
+            value="{{$companyInfomationSession->company_id}}"></li>
+      </ul>
+      <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">疑問点</span></li>
         <li class="detail__item"><textarea class="add-textarea" name="question_point" id="" cols="30"
             rows="10">{{old('question_point')}}</textarea></li>

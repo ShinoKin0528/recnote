@@ -10,16 +10,39 @@
 
 <div class="wrap">
   <div class="page-top">
-    <h1 class="page-top__ttl">質問登録</h1>
+    <h1 class="page-top__ttl">詳細情報編集</h1>
     <p class="page-top__company-name">{{$company_name}}</p>
   </div>
 </div>
+
 <div class="wrap">
   <div class="company__box company__box--add">
-    <form action="questionsAdd" method="POST">
+    @if($errors->isEmpty())
+    <form action="questionsEdit" method="POST">
       @csrf
       <ul class="detail__list">
-        <li class="detail__item"><input class="add-input" type="hidden" name="company_id" value="{{$company_id}}"></li>
+        <li class="detail__item"><input class="add-input" type="hidden" name="company_id"
+            value="{{$questions->company_id}}"></li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl-box"><span class="detail__ttl">希望職種の仕事内容</span></li>
+        <li class="detail__item"><textarea class="add-textarea" name="questions" id="" cols="30"
+            rows="10">{{$questions->questions}}</textarea></li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__item--send">
+          <a href="/companyDetail?id={{$questions->company_id}}" class="submit-button__add">戻る</a>
+          <input class="submit-button__add" type="submit" value="変更する">
+        </li>
+      </ul>
+    </form>
+
+    @else
+    <form action="questionsEdit" method="POST">
+      @csrf
+      <ul class="detail__list">
+        <li class="detail__item"><input class="add-input" type="hidden" name="company_id"
+            value="{{$questions->company_id}}"></li>
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">質問</span></li>
@@ -31,11 +54,12 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__item--send">
-          <a href="/companyDetail?id={{$company_id}}" class="submit-button__add">戻る</a>
-          <input class="submit-button__add" type="submit" value="登録する">
+          <a href="/companyDetail?id={{$questions->comapny_id}}" class="submit-button__add">戻る</a>
+          <input class="submit-button__add" type="submit" value="変更する">
         </li>
       </ul>
     </form>
+    @endif
   </div>
 </div>
 
