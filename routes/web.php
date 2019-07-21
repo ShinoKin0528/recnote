@@ -55,3 +55,27 @@ Route::get('/wishJobtypeAdd', 'WishJobtypeController@wishJobtypeAdd');
 Route::post('/wishJobtypeAdd', 'WishJobtypeController@wishJobtypeCreate');
 Route::get('/wishJobtypeEdit', 'WishJobtypeController@wishJobtypeEdit');
 Route::post('/wishJobtypeEdit', 'WishJobtypeController@wishJobtypeUpdate');
+
+//福利厚生
+Route::get('/welfareAdd', 'WelfareController@welfareAdd');
+Route::post('/welfareAdd', 'WelfareController@wwelfarereate');
+Route::get('/welfareEdit', 'WelfareController@welfareEdit');
+Route::post('/welfareEdit', 'WelfareController@welfareUpdate');
+
+//採用情報
+Route::get('/recruitementInfoAdd', 'RecruitementInfoController@recruitementInfoAdd');
+Route::post('/recruitementInfoAdd', 'RecruitementInfoController@recruitementInfoCreate');
+Route::get('/recruitementInfoEdit', 'RecruitementInfoController@recruitementInfoEdit');
+Route::post('/recruitementInfoEdit', 'RecruitementInfoController@recruitementInfoUpdate');
+
+//説明会・面談情報
+Route::get('/companyInfomationSessionAdd', 'CompanyInfomationSessionController@companyInfomationSessionAdd');
+Route::post('/companyInfomationSessionAdd', 'CompanyInfomationSessionController@companyInfomationSessionCreate');
+Route::get('/companyInfomationSessionEdit', 'CompanyInfomationSessionController@companyInfomationSessionEdit');
+Route::post('/companyInfomationSessionEdit', 'CompanyInfomationSessionController@companyInfomationSessionUpdate');
+
+//質問
+Route::get('questions/Add', 'QuestionsController@questionsAdd');
+Route::post('questions/Add', 'QuestionsController@questionsCreate');
+Route::get('questions/Edit', 'QuestionsController@questionsEdit');
+Route::post('questions/Edit', 'QuestionsController@questionsUpdate');

@@ -8,6 +8,10 @@ use App\Company;
 use App\Basic;
 use App\Detail;
 use App\WishJobtype;
+use App\Welfare;
+use App\RecruitementInfo;
+use App\CompanyInfomationSession;
+use App\Questions;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -57,11 +61,20 @@ class RecnoteController extends Controller
                 $basic = Basic::where('company_id', $request->id)->first();
                 $detail = Detail::where('company_id', $request->id)->first();
                 $wish_jobtype = WishJobtype::where('company_id', $request->id)->first();
+                $welfare = Welfare::where('company_id', $request->id)->first();
+                $recruitementInfo = RecruitementInfo::where('company_id', $request->id)->first();
+                $companyInfomationSession = CompanyInfomationSession::where('company_id', $request->id)->first();
+                $questions = Questions::where('company_id', $request->id)->first();
+
                 $data = [
                     'company' => $company,
                     'basic' => $basic,
                     'detail' => $detail,
                     'wish_jobtype' => $wish_jobtype,
+                    'welfare' => $welfare,
+                    'recruitementInfo' => $recruitementInfo,
+                    'companyInfomationSession' => $companyInfomationSession,
+                    'questions' => $questions,
                 ];
                 return view('companyDetail', $data);
             }

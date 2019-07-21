@@ -223,6 +223,218 @@
   </div>
 </div>
 
+<div class="wrap">
+  <div class="info-box">
+    <div class="info-box__ttls">
+      <h2 class="info-box__ttl">福利厚生</h2>
+    </div>
+    @if (isset($welfare))
+    <div class="info-box__contents">
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">初任給</span></li>
+        <li class="detail__item">{{$welfare->starting_salary}}円</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">年間休日日数</span></li>
+        <li class="detail__item">{{$welfare->holidays}}日</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">平均有給日数</span></li>
+        <li class="detail__item">{{$welfare->paid_vacation}}日</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">平均残業時間</span></li>
+        <li class="detail__item">{{$welfare->overtime}}時間</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">休日形式</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->holidays_format)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">休暇制度</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->holidays_system)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">残業時間</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->working_hours)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">社会保険</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->social_insurance)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">手当</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->allowance)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">教育制度</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->education)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">教育制度</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->get_license)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">感じたこと</span></li>
+        <li class="detail__item">{!! nl2br(e($welfare->memo)) !!}</li>
+      </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a href="/welfareEdit?id={{$company->id}}"
+            class="no-data__link">福利厚生を編集する</a>
+        </li>
+      </ul>
+    </div>
+    @else
+    <div class="info-box__contents">
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link"><a href="/welfareAdd?id={{$company->id}}"
+            class="no-data__link">福利厚生を登録する</a></li>
+      </ul>
+    </div>
+    @endif
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="info-box">
+    <div class="info-box__ttls">
+      <h2 class="info-box__ttl">採用情報</h2>
+    </div>
+    @if (isset($recruitementInfo))
+    <div class="info-box__contents">
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">応募職種</span></li>
+        <li class="detail__item">{{$recruitementInfo->apply_jobtype}}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">面接回数</span></li>
+        <li class="detail__item">{{$recruitementInfo->interview_times}}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">求める人物</span></li>
+        <li class="detail__item">{!! nl2br(e($recruitementInfo->want_people)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">求めるスキル</span></li>
+        <li class="detail__item">{!! nl2br(e($recruitementInfo->want_skills)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">試験内容</span></li>
+        <li class="detail__item">{!! nl2br(e($recruitementInfo->test_info)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">提出書類</span></li>
+        <li class="detail__item">{!! nl2br(e($recruitementInfo->handin_documents)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">志望動機</span></li>
+        <li class="detail__item">{!! nl2br(e($recruitementInfo->aspiration_motive)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">自己PR</span></li>
+        <li class="detail__item">{!! nl2br(e($recruitementInfo->pr_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">感じたこと</span></li>
+        <li class="detail__item">{!! nl2br(e($recruitementInfo->memo)) !!}</li>
+      </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a
+            href="/recruitementInfoEdit?id={{$company->id}}" class="no-data__link">採用情報を編集する</a>
+        </li>
+      </ul>
+    </div>
+    @else
+    <div class="info-box__contents">
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link"><a href="/recruitementInfoAdd?id={{$company->id}}"
+            class="no-data__link">採用情報を登録する</a></li>
+      </ul>
+    </div>
+    @endif
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="info-box">
+    <div class="info-box__ttls">
+      <h2 class="info-box__ttl">説明会・面談情報</h2>
+    </div>
+    @if (isset($companyInfomationSession))
+    <div class="info-box__contents">
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">疑問点</span></li>
+        <li class="detail__item">{!! nl2br(e($companyInfomationSession->question_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">会社内の雰囲気</span></li>
+        <li class="detail__item">{!! nl2br(e($companyInfomationSession->question_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">会社員の雰囲気</span></li>
+        <li class="detail__item">{!! nl2br(e($companyInfomationSession->question_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">メモの内容</span></li>
+        <li class="detail__item">{!! nl2br(e($companyInfomationSession->question_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">良かった点</span></li>
+        <li class="detail__item">{!! nl2br(e($companyInfomationSession->question_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">違和感を覚えた点</span></li>
+        <li class="detail__item">{!! nl2br(e($companyInfomationSession->question_point)) !!}</li>
+      </ul>
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">もっと知りたいこと</span></li>
+        <li class="detail__item">{!! nl2br(e($companyInfomationSession->question_point)) !!}</li>
+      </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a
+            href="/companyInfomationSessionEdit?id={{$company->id}}" class="no-data__link">説明会・面談情報を編集する</a>
+        </li>
+      </ul>
+    </div>
+    @else
+    <div class="info-box__contents">
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link"><a href="/companyInfomationSessionAdd?id={{$company->id}}"
+            class="no-data__link">説明会・面談情報を登録する</a></li>
+      </ul>
+    </div>
+    @endif
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="info-box">
+    <div class="info-box__ttls">
+      <h2 class="info-box__ttl">質問</h2>
+    </div>
+    @if (isset($questions))
+    <div class="info-box__contents">
+      <ul class="detail__list">
+        <li class="detail__ttl--box"><span class="detail__ttl">感じたこと</span></li>
+        <li class="detail__item">{!! nl2br(e($questions->questions)) !!}</li>
+      </ul>
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link no-data__item--left"><a href="/questionsEdit?id={{$company->id}}"
+            class="no-data__link">質問を編集する</a>
+        </li>
+      </ul>
+    </div>
+    @else
+    <div class="info-box__contents">
+      <ul class="detail-nodata">
+        <li class="no-data__item no-data__item--link"><a href="/questionsAdd?id={{$company->id}}"
+            class="no-data__link">質問を登録する</a></li>
+      </ul>
+    </div>
+    @endif
+  </div>
+</div>
+
 <div class="bottom-btn">
   <div class="bottom-btn--now">
     <a class="bottom-btn__link bottom-btn__link--now" href="/">企業情報</a>
