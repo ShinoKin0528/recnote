@@ -96,7 +96,7 @@
       @csrf
       <ul class="detail__list">
         <li class="detail__item"><input class="add-input" type="hidden" name="company_id"
-            value="{{$basic->company_id}}"></li>
+            value="{{$welfare->company_id}}"></li>
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl-box"><span class="detail__ttl">初任給</span></li>
