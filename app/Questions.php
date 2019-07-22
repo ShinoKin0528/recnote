@@ -10,6 +10,6 @@ class Questions extends Model
     protected $guarded = array('id');
 
     public static $rules = array(
-        'questions' => 'nullable|string|max:150',
+        'questions' => 'nullable|string',
     );
 }
