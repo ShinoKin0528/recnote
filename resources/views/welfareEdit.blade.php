@@ -40,7 +40,7 @@
             value="{{$welfare->paid_vacation}}"></li>
       </ul>
       <ul class="detail__list">
-        <li class="detail__ttl-box"><span class="detail__ttl">返金残業時間</span></li>
+        <li class="detail__ttl-box"><span class="detail__ttl">平均残業時間</span></li>
         <li class="detail__item"><input class="add-input" type="text" name="overtime" value="{{$welfare->overtime}}">
         </li>
       </ul>
@@ -122,7 +122,7 @@
         @endif
       </ul>
       <ul class="detail__list">
-        <li class="detail__ttl-box"><span class="detail__ttl">平均残業日数</span></li>
+        <li class="detail__ttl-box"><span class="detail__ttl">平均残業時間</span></li>
         <li class="detail__item"><input class="add-input" type="text" name="overtime" value="{{old('overtime')}}"></li>
         @if($errors->has('overtime'))
         <li class="detail__error">{{$errors->first('overtime')}}</li>

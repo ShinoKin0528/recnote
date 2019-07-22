@@ -255,7 +255,7 @@
         <li class="detail__item">{!! nl2br(e($welfare->holidays_system)) !!}</li>
       </ul>
       <ul class="detail__list">
-        <li class="detail__ttl--box"><span class="detail__ttl">残業時間</span></li>
+        <li class="detail__ttl--box"><span class="detail__ttl">就業時間</span></li>
         <li class="detail__item">{!! nl2br(e($welfare->working_hours)) !!}</li>
       </ul>
       <ul class="detail__list">
@@ -308,7 +308,7 @@
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl--box"><span class="detail__ttl">面接回数</span></li>
-        <li class="detail__item">{{$recruitementInfo->interview_times}}</li>
+        <li class="detail__item">{{$recruitementInfo->interview_times}}回</li>
       </ul>
       <ul class="detail__list">
         <li class="detail__ttl--box"><span class="detail__ttl">求める人物</span></li>
