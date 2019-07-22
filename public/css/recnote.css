@@ -230,6 +230,7 @@ body {
   padding-top: 5px;
   color: #4b4b4b;
   font-size: 16px;
+  line-height: 1.25;
 }
 .detail__link {
   text-decoration: underline;
@@ -328,7 +329,8 @@ body {
 
 input,
 option,
-select {
+select,
+textarea {
   font-family: UD Shin Maru Go Regular;
 }
 
