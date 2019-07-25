@@ -67,9 +67,9 @@
 </div>
 @else
 <div class="wrap">
-  <div class="top-button">
+  <!--<div class="top-button">
     <a href="/register" class="top-button__link">使ってみる</a>
-  </div>
+  </div>-->
   <div class="top-button">
     <a href="/login" class="top-button__link">ログイン</a>
   </div>
